@@ -2,8 +2,8 @@
 font-family: 'Raleway', sans-serif;
 font-family: 'Ysabeau SC', sans-serif;*/
 
-footer{background-color: #aaa;}
-h1,h2 {font-family: 'Ysabeau SC', sans-serif}
+footer{background-color: #fff;}
+h1,h2 {font-family:Arial, Helvetica, sans-serif}
 
 .hero {
     background: url(../images/index.jpg) no-repeat;
@@ -107,3 +107,8 @@ height: 250px;
     float: left; /* Alinea el texto a la derecha de la imagen */
     width: calc(50% - 10px); /* El ancho del texto es el 50% del contenedor menos el espacio */
   }
+
+  .texto {
+    font-size:x-large;
+  }
+
