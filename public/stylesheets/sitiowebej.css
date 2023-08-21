@@ -1,0 +1,109 @@
+/*font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Ysabeau SC', sans-serif;*/
+
+footer{background-color: #aaa;}
+h1,h2 {font-family: 'Ysabeau SC', sans-serif}
+
+.hero {
+    background: url(../images/index.jpg) no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-height: 540px;
+}
+
+
+.lista-servicios {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lista-servicios li {
+    margin: 4px 0;
+}
+
+.lista-servicios li a {
+    background-color: #fff;
+    font-family: 'Ysabeau SC', sans-serif;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    transition: all .2s ease-in-out;
+    display: block;
+}
+
+.lista-servicios li a:hover {
+    color: #212529;
+    background-color: #dadada;
+}
+
+.lista-servicios li a img {
+    width: 100px;
+    height: 80px;
+    filter: grayscale();
+    transition: all .2s ease-in-out;
+    margin-right: 1rem;
+    opacity: 0.7;
+}
+
+.lista-servicios li a:hover img {
+    filter: none;
+    margin-right: 1.4rem;
+    opacity: 1;
+}
+
+.staff {
+    background: #efefef ;
+}
+
+.mapa iframe {
+    width: 100%;
+    aspect-ratio: 1.2;
+
+}
+
+.html {
+    scroll-behavior: smooth;
+}
+
+.scroll_section {
+    scroll-margin-top: 200px;
+}
+
+#galeria img{
+width: 100%;
+height: 250px;
+}
+
+#galeria .col-lg-4 {
+    padding: 10px;
+    margin: 0 !important;
+    
+}
+
+#galeria img:hover {
+ border: 5px solid #f7f7f7;
+ cursor: pointer;
+}
+  
+.contenedor {
+    width: 100%; /* Ancho total del contenedor */
+    overflow: hidden; /* Limpieza de flotados */
+    display: flex; /* Activa el diseño flex */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+  }
+  
+  .imagen-reducida {
+    max-width: 42%;
+    height: auto;
+    float: left; /* Alinea la imagen a la izquierda */
+    margin-right: 100px; /* Espacio entre imagen y texto */
+    border: 2px solid #333;
+  }
+  
+  .texto {
+    float: left; /* Alinea el texto a la derecha de la imagen */
+    width: calc(50% - 10px); /* El ancho del texto es el 50% del contenedor menos el espacio */
+  }

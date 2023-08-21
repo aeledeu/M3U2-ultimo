@@ -1,0 +1,70 @@
+<head>
+    <script src="https://kit.fontawesome.com/92027e1345.js" crossorigin="anonymous"></script>
+</head>
+<div class="container" style="margin:50px auto">
+    <div class="row">
+        <div class="col">
+            <p class="text-end">Hola {{ usuario }} ! <a href="/admin/login/logout" class="btn btn-sm btn-danger">Cerrar
+                    sesión <i class="fa fa-sign-out-alt"></i></a></p>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-7" style="margin: top -9px;">
+            <h3>Tipos de trabajos</h3>
+        </div>
+        <div class="col-2 text-end">
+            <a href="/admin/novedades/agregar" class="btn btn-sm btn-success"> <i class="fas fa-plus"></i>Nuevo</a>
+        </div>
+        <div class="col-3 text-end">
+            <form class="form-inline" action="/admin/novedades" method="get">
+                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" name="q" {{#if q}}
+                    value="{{q}}" {{/if}}>
+                <button class="btn btn-sm btn-secondary my-2 my-sm-0" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col" class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each novedades}}
+                    <tr>
+                        <th scope="row">{{id}}</th>
+                        <td>{{titulo}}</td>
+                        <td>{{{imagen}}}</td>
+                        <td class="text-center">
+                            <a href="/admin/novedades/modificar/{{id}}" class="btn btn-sm btn-secondary"><i
+                                    class="fa fa-pencil"></i></a>
+                            <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-sm btn-secondary"><i
+                                    class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            {{#if is_search}}
+            {{#unless novedades.length}}
+            <p class="text-center">No se encontraron resultados para "<b>{{q}}</b>"</p>
+            {{/unless}}
+            {{/if}}
+        </div>
+    </div>
+
+</div>
